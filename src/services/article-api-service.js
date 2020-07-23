@@ -29,6 +29,7 @@ const ArticleApiService = {
   getArticleComments(articleId) {
     return fetch(`${config.API_ENDPOINT}/articles/${articleId}/comments`, {
       headers: {
+        'authorization': `basic ${TokenService.getAuthToken()}`
       },
     })
       .then(res =>
