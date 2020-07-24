@@ -40,7 +40,7 @@ class App extends Component {
               path={'/register'}
               component={RegistrationPage}
             />
-            <PublicOnlyRoute
+            <PrivateRoute
               path={'/article/:articleId'}
               component={ArticlePage}
             />
